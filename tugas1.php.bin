@@ -1,0 +1,167 @@
+<?php
+
+class motor {
+    public  $nama,
+            $merk,
+            $warna,
+            $cc,
+            $bahanbakar;
+
+    public function tambahkecepatan() {
+
+    }
+
+    public function kurangikecepatan() {
+
+    }
+    
+    public function hidupkanmesin() {
+
+    }
+
+    public function matikanmesin() {
+
+    }
+
+    public function belokkiri() {
+
+    }
+
+    public function belokkanan() {
+
+    }
+
+}
+
+class motorcruiser extends motor {
+    public $transmisi = false;
+    public $kopling = false;
+
+    public function gantitransmisi(){
+        $this->transmisi = true;
+        return "Transmisi diganti!";
+    }
+
+    public function tarikkopling(){
+        $this->kopling = true;
+        return "Kopling dijalankan!";
+    }
+}
+
+class motormatic extends motor {
+    public $vva = false;
+    public $idlingstop = false;
+
+    public function vvahidup(){
+        $this->vva = true;
+        return "VVA dihidupkan!";
+    }
+
+    public function nyalakanidlingstop(){
+        $this->idlingstop = true;
+        return "Idling Stop dinyalakan!";
+    }
+}
+
+$motor1 = new motorcruiser();
+echo $motor1->tambahkecepatan();
+echo $motor1->kurangikecepatan();
+echo "<br>";
+echo $motor1->gantitransmisi();
+echo "<br>";
+echo $motor1->hidupkanmesin();
+echo "<br>";
+echo $motor1->tarikkopling();
+echo "<br>";
+$motor2 = new motormatic();
+echo $motor2->tambahkecepatan();
+echo "<br>";
+echo $motor2->vvahidup();
+echo "<br>";
+echo $motor2->matikanmesin();
+echo "<br>";
+echo $motor2->nyalakanidlingstop();
+?>
+
+<?php
+
+class playstation {
+    public  $nama,
+            $merk,
+            $warna,
+			$jenis,
+			$resolusi;
+			
+    public function menjalankangame() {
+
+    }
+
+    public function mensavegame() {
+
+    }
+    
+    public function memasukkangame() {
+
+    }
+
+    public function mengkontrolgame() {
+
+    }
+
+    public function menghapusgame() {
+
+    }
+
+
+}
+
+class playstation2 extends playstation {
+    public $joystikkabel = false;
+    public $memoricard = false;
+
+    public function colokkanjoystikkabel(){
+        $this->joystikkabel = true;
+        return "Joystik Kabel Terhubung!";
+    }
+
+    public function masukkanmemoricard(){
+        $this->memoricard = true;
+        return "Memori Card Terhubung!";
+    }
+}
+
+class playstation3 extends playstation {
+    public $porthdmi = false;
+    public $joystiknirkabel = false;
+
+    public function colokkanporthdmi(){
+        $this->hdmi = true;
+        return "Port HDMI Terhubung!";
+    }
+
+    public function nyalakanjoystiknirkabel(){
+        $this->joystiknirkabel = true;
+        return "Joystik Nirkabel Terhubung!";
+    }
+}
+
+$ps2 = new playstation2();
+echo $ps2->kontrolgame();
+echo "<br>";
+echo $ps2->hubungkanjoystikkabel();
+echo "<br>";
+echo $ps2->mensavegame();
+echo "<br>";
+echo $ps2->hubungkanmemoricard();
+echo "<br>";
+$ps3 = new playstation3();
+echo $ps3->menyalakanplaystation();
+echo $ps3->kontrolgame();
+echo $ps3->menggantigame();
+echo "<br>";
+echo $ps3->joystiknirkabelterhubung();
+echo "<br>";
+echo $ps3->resolusihd();
+echo "<br>";
+echo $ps3->hubungkanporthdmi();
+?>
